@@ -180,4 +180,4 @@ variable	parameter_group	domain	sub_domain	name	units	description
 195	temperature	atmospheric		daily mean air temperature	K	TBD
 196	temperature	atmospheric		maximum soil temperature	K	Lot 1 is using Ts - WMO abbrev.
 197	temperature	atmospheric		minimum soil temperature	K	Lot 1 is using Ts - WMO abbrev.
-198	radiation	atmospheric		monthly global solar radiation	W m-2	This parameter is the total solar energy(direct and diffuse) measured at the Earth's surface per unit of area. in MJ/meter^2, calculated from the hourly average global solar radiation rates and converted to energy by integrating over time. For simplicity of use, the values are provided in Mega-Joules per square metre (MJ/m**2).
+198	radiation	atmospheric		monthly global solar radiation	W m-2	Total solar energy(direct and diffuse) measured at the Earth's surface per unit of area. in MJ/meter^2, calculated from the hourly average global solar radiation rates and converted to energy by integrating over time. For simplicity of use, the values are provided in Mega-Joules per square metre (MJ/m**2).
