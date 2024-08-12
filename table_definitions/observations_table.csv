@@ -64,3 +64,4 @@ positive_quasisystematic_uncertainty	numeric		The quasi-systematic uncertainties
 negative_quasisystematic_uncertainty	numeric		The quasi-systematic uncertainties are related to the estimates of errors which behave in a consistent way between measurements over a time period similar to that over which measurements are recorded.
 combined_uncertainty	numeric		This variable is the combined sum of all uncertainties in the total column water vapour derived from zenith total delay and ancillary meteorological data (GNSS).
 logbook_version	numeric		The version number of the station datalogger program that was in effect at the time of the observation.
+desroziers_30_uncertainy	numeric		Desroziers uncertainty v 1.0 - 30 days window.
