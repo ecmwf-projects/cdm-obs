@@ -65,3 +65,5 @@ negative_quasisystematic_uncertainty	numeric		The quasi-systematic uncertainties
 combined_uncertainty	numeric		This variable is the combined sum of all uncertainties in the total column water vapour derived from zenith total delay and ancillary meteorological data (GNSS).
 logbook_version	numeric		The version number of the station datalogger program that was in effect at the time of the observation.
 desroziers_30_uncertainy	numeric		Desroziers uncertainty v 1.0 - 30 days window.
+lond	numeric		Longitude increments in degrees, should be added to longitude.
+latd	numeric		Latitude increments in degrees, should be added to latitude.
