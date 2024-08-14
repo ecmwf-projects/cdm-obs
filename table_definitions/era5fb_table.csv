@@ -43,7 +43,7 @@ datum_rdbflag@body	bool		observation flags (rdb)
 biascorr@body	 numeric		radiance bias correction
 qc_pge@body	 numeric		var qc a posteriori probability of gross error
 an_depar@body	 numeric		observed minus analysed value
-fg_depar@body	 numeric		observed minus first guess value
+fg_depar@body	 numeric		observed minus first guess value (compute online, only available for the stations used in ERA5)
 fg_depar@offline	 numeric		observed minus first guess value (computed offline, available for all stations).
 lsm@surfbody_feedback	 numeric
 stalt@hdr	 numeric		altitude
