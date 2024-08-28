@@ -133,7 +133,7 @@ variable	parameter_group	domain	sub_domain	name	units	description
 144		atmospheric	upper-air	monthly total ozone column	DU	Monthly value of total column ozone amount
 145		atmospheric	upper-air	monthly standard deviation ozone		Standard deviation of daily total column ozone
 146				monthly total ozone column number of points	count	The number of points (typically this is the number of daily averages) used to estimate the monthly mean ozone value
-147		atmospheric	upper-air	standard deviation ozone		Estimated population standard deviation of the total column ozone measurements used for the daily value.
+147		atmospheric	upper-air	total ozone column standard deviation		Estimated population standard deviation of the total column ozone measurements used for the daily value.
 148				number of points		Number of observations used to calculate the total column ozone value
 149		atmospheric	upper-air	column sulphur dioxide	DU	The daily total column sulphur dioxide (SO2) amount calculated as the mean of the individual SO2 amounts
 150		atmospheric	upper-air	ozone partial pressure	Pa	Level partial pressure of ozone in milli-Pascals (mPa)
