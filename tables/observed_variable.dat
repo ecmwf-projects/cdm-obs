@@ -138,7 +138,7 @@ variable	parameter_group	domain	sub_domain	name	units	description
 149		atmospheric	upper-air	column sulphur dioxide	DU	The daily total column sulphur dioxide (SO2) amount calculated as the mean of the individual SO2 amounts
 150		atmospheric	upper-air	ozone partial pressure	Pa	Level partial pressure of ozone in milli-Pascals (mPa)
 151		atmospheric	upper-air	ozone concentration	ppmv	Level mixing ratio of ozone in ppmv
-152		atmospheric	upper-air	total ozone column 	DU	Ozone (DU) integrated up to the current altitude level
+152		atmospheric	upper-air	total ozone column	DU	Ozone (DU) integrated up to the current altitude level
 153		atmospheric	upper-air	flight summary integrated O3	DU	Ozone amount integrated over the whole balloon profile.
 154				sampling method burst ozone pressure	Pa	Atmospheric pressure when balloon burst in hPa.
 155	lidar	atmospheric		measurement_wavelength	nm	Wavelength of the transmitted laser pulse
