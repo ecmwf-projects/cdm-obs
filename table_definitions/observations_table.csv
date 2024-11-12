@@ -51,3 +51,4 @@ advanced_homogenisation	int	data_present:flag	Flag indicating whether advanced h
 advanced_assimilation_feedback	int	data_present:flag	Flag indicating whether assimilation feedback is available
 source_id	varchar	source_configuration:source_id	Original source of data, link to external table
 logbook_version	numeric		The version number of the station datalogger program that was in effect at the time of the observation.
+cloud_conditions	varchar		Sky conditions; Possible Values: clear-sky; thin clouds; thick clouds; broken clouds; [empty]. [empty] means that the cloud retrieval is not successful, not possible or missing.

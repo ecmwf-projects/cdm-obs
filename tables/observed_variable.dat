@@ -186,3 +186,16 @@ variable	parameter_group	domain	sub_domain	name	units	description
 201		atmospheric	upper-air	methane total column	Emolec cm-2	 Retrieved total vertical CH4 column between boundaries of altitude grid.
 202		atmospheric	upper-air	methane partial column	Pmolec cm-2	 CH4 partial columns in the retrieval layers.
 203		atmospheric	upper-air	methane volume mixing ratio	ppmv	Vertical CH4 profile from solar absorption measurements.
+204		atmospheric	upper-air	carbon_monoxide_partial_column	Pmolec cm-2	Vertical CH4 profile from solar absorption measurements.
+205		atmospheric	upper-air	carbon_monoxide_volume_mixing_ratio	ppmv	Vertical CH4 profile from solar absorption measurements.
+206		atmospheric	upper-air	carbon_monoxide_total_column	Emolec cm-2	Vertical CH4 profile from solar absorption measurements.
+207		atmospheric	upper-air	ozone partial column	Pmolec cm-2	 O3 partial columns in the retrieval layers.
+208		atmospheric	upper-air	ozone volume mixing ratio	ppmv	Vertical O3 profile from solar absorption measurements.
+209		atmospheric	upper-air	ozone partial column derived	Dobson-Units	 O3 partial columns Derived from lidar and independent source.
+210		atmospheric	upper-air	ozone number density	molec m-3	 Core, measured variable.
+211		atmospheric	upper-air	water vapor total column	Emolec cm-2	 Total vertical column of H2O adopted in the target gas retrieval.
+212	radiation	atmospheric	surface; upper air	solar azimuth angle	degrees	solar zenith angle
+213		atmospheric	upper-air	instrument viewing azimuth angle	degrees	 The azimuth viewing direction of the instrument using north as the reference plane and increasing clockwise (0 for north, 90 for east and so on).
+214		atmospheric	upper-air	instrument viewing zenith angle	degrees	 The zenith viewing direction of the instrument.
+215		atmospheric	upper-air	ozone slant column	Pmolec cm-2	 Zenith slant column density of target gas corresponding to datetime.
+215		atmospheric	upper-air	ozone slant column	Pmolec cm-2	 Zenith slant column density of target gas corresponding to datetime.
