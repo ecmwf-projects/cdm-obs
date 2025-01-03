@@ -2,7 +2,7 @@
 # Source:
 element_name	kind	external_table	description
 observation_id	varchar (pk)	observations_table:observation_id	Link to observation this entry is for
-desroziers_180_uncertainy	numeric 		Desroziers uncertainty v 1.0 - 180 days window
-desroziers_30_uncertainy	numeric 		Desroziers uncertainty v 1.0 - 30 days window
-desroziers_60_uncertainy	numeric 		Desroziers uncertainty v 1.0 - 60 days window"
-desroziers_90_uncertainy	numeric 		Desroziers uncertainty v 1.0 - 90 days window
+desroziers_180_uncertainty	numeric 		Desroziers uncertainty v 1.0 - 180 days window
+desroziers_30_uncertainty	numeric 		Desroziers uncertainty v 1.0 - 30 days window
+desroziers_60_uncertainty	numeric 		Desroziers uncertainty v 1.0 - 60 days window"
+desroziers_90_uncertainty	numeric 		Desroziers uncertainty v 1.0 - 90 days window
