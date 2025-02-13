@@ -138,7 +138,7 @@ variable	parameter_group	domain	sub_domain	name	units	description
 149		atmospheric	upper-air	column sulphur dioxide	DU	The daily total column sulphur dioxide (SO2) amount calculated as the mean of the individual SO2 amounts
 150		atmospheric	upper-air	ozone partial pressure	Pa	Level partial pressure of ozone in milli-Pascals (mPa)
 151		atmospheric	upper-air	ozone concentration	ppmv	Level mixing ratio of ozone in ppmv
-152		atmospheric	upper-air	total ozone column 	DU	Ozone (DU) integrated up to the current altitude level
+152		atmospheric	upper-air	total ozone column	DU	Ozone (DU) integrated up to the current altitude level
 153		atmospheric	upper-air	flight summary integrated O3	DU	Ozone amount integrated over the whole balloon profile.
 154				sampling method burst ozone pressure	Pa	Atmospheric pressure when balloon burst in hPa.
 155	lidar	atmospheric		measurement_wavelength	nm	Wavelength of the transmitted laser pulse
@@ -159,8 +159,6 @@ variable	parameter_group	domain	sub_domain	name	units	description
 170	humidity	atmospheric	surface	soil_moisture	m3 m-3	Ratio of water volume over sample volume (m^3 water/m^3 soil)
 171	humidity	atmospheric		daily maximum relative humidity	percent	TBD
 172	humidity	atmospheric		daily minimum relative humidity	percent	TBD
-173	temperature	atmospheric		monthly maximum soil temperature	K	Lot 1 is using Ts - WMO abbrev.
-174	temperature	atmospheric		monthly minimum soil temperature	K	Lot 1 is using Ts - WMO abbrev.
 175	wind	atmospheric	surface; upper-air	wind speed 2 meters from earth surface	m s-1	Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector,  with no vertical component. (Vertical motion in the atmosphere has the standard name upward air velocity.) The wind speed is the magnitude of the wind velocity. Lot 1 uses ff  - WMO abbrev.
 176	temperature	atmospheric		soil temperature 5cm from earth surface	K	TBD
 177	temperature	atmospheric		soil temperature 10cm from earth surface	K	TBD
@@ -174,6 +172,30 @@ variable	parameter_group	domain	sub_domain	name	units	description
 185	humidity	atmospheric		soil moisture 100cm from earth surface	m3 m-3	TBD
 186	radiation	atmospheric		hourly maximum downward shortwave irradiance at earth surface	W m-2	Flux density of the solar radiation at the Earth surface
 187	radiation	atmospheric		hourly minimum downward shortwave irradiance at earth surface	W m-2	Flux density of the solar radiation at the Earth surface
-188	temperature	atmospheric		hourly maximum soil temperature	K	Lot 1 is using Ts - WMO abbrev.
-189	temperature	atmospheric		hourly minimum soil temperature	K	Lot 1 is using Ts - WMO abbrev.
 190				precipitable water column era5	kg m-2	TBD (GNSS variable)
+191	radiation	atmospheric		solar irradiance	W m-2	The quantity with standard name solar_irradiance, often called Total Solar Irradiance (TSI), is the radiation from the sun integrated over the whole electromagnetic spectrum and over the entire solar disk. The quantity applies outside the atmosphere, by default at a distance of one astronomical unit from the sun, but a coordinate or scalar coordinate variable of distance_from_sun can be used to specify a value other than the default. "Irradiance" means the power per unit area (called radiative flux in other standard names), the area being normal to the direction of flow of the radiant energy.
+192	radiation	atmospheric		maximum solar irradiance	W m-2	Maximum power per unit area (surface power density) received from the Sun in the form of electromagnetic radiation in the wavelength range of the measuring instrument. Solar irradiance is measured in watts per square metre (W/m2) in SI units at the Earth surface over specified period.
+193	radiation	atmospheric		minimum solar irradiance	W m-2	Minumum power per unit area (surface power density) received from the Sun in the form of electromagnetic radiation in the wavelength range of the measuring instrument. Solar irradiance is measured in watts per square metre (W/m2) in SI units at the Earth surface over specified period.
+194	radiation	atmospheric		daily global solar radiation	W m-2	This parameter is the total solar energy(direct and diffuse) measured at the Earth's surface per unit of area. in MJ/meter^2, calculated from the hourly average global solar radiation rates and converted to energy by integrating over time. For simplicity of use, the values are provided in Mega-Joules per square metre (MJ/m**2).
+195	temperature	atmospheric		daily mean air temperature	K	TBD
+196	temperature	atmospheric		maximum soil temperature	K	Lot 1 is using Ts - WMO abbrev.
+197	temperature	atmospheric		minimum soil temperature	K	Lot 1 is using Ts - WMO abbrev.
+198	radiation	atmospheric		monthly global solar radiation	W m-2	Total solar energy(direct and diffuse) measured at the Earth's surface per unit of area. in MJ/meter^2, calculated from the hourly average global solar radiation rates and converted to energy by integrating over time. For simplicity of use, the values are provided in Mega-Joules per square metre (MJ/m**2).
+199		atmospheric	upper-air	total ozone column mol	mol	Ozone (MOLES) integrated up to the current altitude level
+200		atmospheric	upper-air	total ozone column air mass factor	1	Air mass factor associated with the total stratospheric vertical column of the target gas.
+201		atmospheric	upper-air	methane total column	Emolec cm-2	 Retrieved total vertical CH4 column between boundaries of altitude grid.
+202		atmospheric	upper-air	methane partial column	Pmolec cm-2	 CH4 partial columns in the retrieval layers.
+203		atmospheric	upper-air	methane volume mixing ratio	ppmv	Vertical CH4 profile from solar absorption measurements.
+204		atmospheric	upper-air	carbon_monoxide_partial_column	Pmolec cm-2	Vertical CH4 profile from solar absorption measurements.
+205		atmospheric	upper-air	carbon_monoxide_volume_mixing_ratio	ppmv	Vertical CH4 profile from solar absorption measurements.
+206		atmospheric	upper-air	carbon_monoxide_total_column	Emolec cm-2	Vertical CH4 profile from solar absorption measurements.
+207		atmospheric	upper-air	ozone partial column	Pmolec cm-2	 O3 partial columns in the retrieval layers.
+208		atmospheric	upper-air	ozone volume mixing ratio	ppmv	Vertical O3 profile from solar absorption measurements.
+209		atmospheric	upper-air	ozone partial column derived	Dobson-Units	 O3 partial columns Derived from lidar and independent source.
+210		atmospheric	upper-air	ozone number density	molec m-3	 Core, measured variable.
+211		atmospheric	upper-air	water vapor total column	Emolec cm-2	 Total vertical column of H2O adopted in the target gas retrieval.
+212	radiation	atmospheric	surface; upper air	solar azimuth angle	degrees	solar zenith angle
+213		atmospheric	upper-air	instrument viewing azimuth angle	degrees	 The azimuth viewing direction of the instrument using north as the reference plane and increasing clockwise (0 for north, 90 for east and so on).
+214		atmospheric	upper-air	instrument viewing zenith angle	degrees	 The zenith viewing direction of the instrument.
+215		atmospheric	upper-air	ozone slant column	Pmolec cm-2	 Zenith slant column density of target gas corresponding to datetime.
+215		atmospheric	upper-air	ozone slant column	Pmolec cm-2	 Zenith slant column density of target gas corresponding to datetime.
