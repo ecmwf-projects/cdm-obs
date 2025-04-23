@@ -18,3 +18,5 @@ field_id	field_name	kind	description
 17	wl code	2	WCode to designate the wavelength pair(s) used for total ozone measurement.
 18	obs code	2	Code to designate the type of total ozone measurement.
 19	m mu	2	The harmonic mean of the relative slant path through the ozone layer at 22Km for each of the observations used to compute the daily value. 
+20	instrument_viewing_azimuth_angle	2	The azimuth viewing direction of the instrument using north as the reference plane and increasing clockwise (0 for north, 90 for east and so on)
+21	instrument_viewing_zenith_angle	2	The zenith viewing direction of the instrument in degrees between viewing angle and vertical.
