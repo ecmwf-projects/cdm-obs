@@ -46,7 +46,7 @@ units	name	abbreviation	base_units
 230	week		NULL
 231	year	a	NULL
 300	per cent	\%	NULL
-301	parts per thousand	0/00	NULL
+301	parts per thousand	ppt	NULL
 310	eighths of cloud	okta	NULL
 320	degrees true	deg	NULL
 321	degrees per second	deg/s	NULL
