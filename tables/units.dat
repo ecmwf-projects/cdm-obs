@@ -47,6 +47,8 @@ units	name	abbreviation	base_units
 231	year	a	NULL
 300	per cent	\%	NULL
 301	parts per thousand	ppt	NULL
+302	parts per million	ppm	NULL
+303	parts per million by volume	ppmv	NULL
 310	eighths of cloud	okta	NULL
 320	degrees true	deg	NULL
 321	degrees per second	deg/s	NULL
