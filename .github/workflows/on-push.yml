@@ -3,10 +3,10 @@ name: Call Reusable Workflow
 on:
   push:
     branches:
-    - main
+    - master
   pull_request:
     branches:
-    - main
+    - master
 jobs:
   call-reusable:
     uses: ecmwf-projects/cads-obs-catalogue-manager/.github/workflows/on-push.yml@main
