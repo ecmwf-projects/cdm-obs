@@ -138,7 +138,7 @@ variable	parameter_group	domain	sub_domain	name	units	description
 149		atmospheric	upper-air	column sulphur dioxide	DU	The daily total column sulphur dioxide (SO2) amount calculated as the mean of the individual SO2 amounts
 150		atmospheric	upper-air	ozone partial pressure	Pa	Level partial pressure of ozone in milli-Pascals (mPa)
 151		atmospheric	upper-air	ozone concentration	ppmv	Level mixing ratio of ozone in ppmv
-152		atmospheric	upper-air	total ozone column 	DU	Ozone (DU) integrated up to the current altitude level
+152		atmospheric	upper-air	total ozone column	DU	Ozone (DU) integrated up to the current altitude level
 153		atmospheric	upper-air	flight summary integrated O3	DU	Ozone amount integrated over the whole balloon profile.
 154				sampling method burst ozone pressure	Pa	Atmospheric pressure when balloon burst in hPa.
 155	lidar	atmospheric		measurement_wavelength	nm	Wavelength of the transmitted laser pulse
@@ -177,16 +177,16 @@ variable	parameter_group	domain	sub_domain	name	units	description
 188	temperature	atmospheric		hourly maximum soil temperature	K	Lot 1 is using Ts - WMO abbrev.
 189	temperature	atmospheric		hourly minimum soil temperature	K	Lot 1 is using Ts - WMO abbrev.
 190				precipitable water column era5	kg m-2	TBD (GNSS variable)
-191	methane	atmospheric	upper-air	methane_total_column	mol/m^2	retrieved total vertical CH4 column between boundaries of the altitude grid. The multiplication factor to convert mol/m2 to molec/cm2 is 6.02214×10^19
-192	methane	atmospheric	upper-air	methane_volume_mixing_ratio	ppmv	vertical CH4 concentration profile from solar absorption measurements 
-193	methane	atmospheric	upper-air	methane_partial_column	mol/m^2	CH4 partial column concentration in the considered retrieval layer. The multiplication factor to convert mol/m2 to molec/cm2 is 6.02214×10^19.
-194	carbon monoxide	atmospheric	upper-air	carbon_monoxide_total_column	mol/m^2	retrieved total vertical CO column between boundaries of the altitude grid. The multiplication factor to convert mol/m2 to molec/cm2 is 6.02214×10^19.
-195	carbon monoxide	atmospheric	upper-air	carbon_monoxide_partial_column	mol/m^2	CO partial column concentration in the considered retrieval layer. The multiplication factor to convert mol/m2 to molec/cm2 is 6.02214×10^19.
-196	carbon monoxide	atmospheric	upper-air	carbon_monoxide_volume_mixing_ratio	ppmv	vertical CO concentration profile from solar absorption measurements 
-197	ozone	atmospheric	upper-air	ozone_total_column_air_mass_factor	1	The Air Mass Factor (AMF) associated with the total vertical column of the target gas retrieved from zenith DOAS measurements; it is defined as the ratio between the Slant Column Density (SCD) and the Vertical Column Density (VCD) of the gas AMF=SCD/VCD. The AMF depends on the optical path length, the vertical distribution of absorbing trace gases in the atmosphere, the Earth's surface reflectivity (albedo), and other factors.
-198	ozone	atmospheric	upper-air	ozone_partial_column	mol/m^2	O3 partial column concentration in a considered vertical layer. The multiplication factor to convert mol/m2 to molec/cm2 is 6.02214×10^19
-199	ozone	atmospheric	upper-air	ozone_slant_column	mol/m^3	Zenith slant column density of target gas corresponding to the observation report timestamp. The multiplication factor to convert mol/m3 to molec/cm3 is 6.02214×10^17.
+191	methane	atmospheric	upper-air	methane total column	mol/m^2	retrieved total vertical CH4 column between boundaries of the altitude grid. The multiplication factor to convert mol/m2 to molec/cm2 is 6.02214×10^19
+192	methane	atmospheric	upper-air	methane volume mixing ratio	ppmv	vertical CH4 concentration profile from solar absorption measurements 
+193	methane	atmospheric	upper-air	methane partial column	mol/m^2	CH4 partial column concentration in the considered retrieval layer. The multiplication factor to convert mol/m2 to molec/cm2 is 6.02214×10^19.
+194	carbon monoxide	atmospheric	upper-air	carbon monoxide total column	mol/m^2	retrieved total vertical CO column between boundaries of the altitude grid. The multiplication factor to convert mol/m2 to molec/cm2 is 6.02214×10^19.
+195	carbon monoxide	atmospheric	upper-air	carbon monoxide partial column	mol/m^2	CO partial column concentration in the considered retrieval layer. The multiplication factor to convert mol/m2 to molec/cm2 is 6.02214×10^19.
+196	carbon monoxide	atmospheric	upper-air	carbon monoxide volume mixing ratio	ppmv	vertical CO concentration profile from solar absorption measurements 
+197	ozone	atmospheric	upper-air	ozone total column air mass factor	1	The Air Mass Factor (AMF) associated with the total vertical column of the target gas retrieved from zenith DOAS measurements; it is defined as the ratio between the Slant Column Density (SCD) and the Vertical Column Density (VCD) of the gas AMF=SCD/VCD. The AMF depends on the optical path length, the vertical distribution of absorbing trace gases in the atmosphere, the Earth's surface reflectivity (albedo), and other factors.
+198	ozone	atmospheric	upper-air	ozone partial column	mol/m^2	O3 partial column concentration in a considered vertical layer. The multiplication factor to convert mol/m2 to molec/cm2 is 6.02214×10^19
+199	ozone	atmospheric	upper-air	ozone slant column	mol/m^3	Zenith slant column density of target gas corresponding to the observation report timestamp. The multiplication factor to convert mol/m3 to molec/cm3 is 6.02214×10^17.
 200	clouds	atmospheric	upper-air	cloud conditions	coded	Sky conditions; Possible Values: clear-sky; thin clouds; thick clouds; broken clouds; [empty]. [empty] means that the cloud retrieval is not successful, not possible or missing. 
-201	ozone, CH4, CO, HCOCH, NO2	atmospheric	surface; upper-air	solar_azimuth_angle	degrees	Solar azimuth angle is the horizontal angle between the line of sight to the sun and a reference direction which is often due north. The angle is measured clockwise.
-202	ozone	atmospheric	upper-air	ozone_reference_total_ozone	DU	Daily value of total column ozone amount defined as the 'best representative value' in the order of Direct Sun (DS), Zenith Cloud (ZS) and Focused Moon (FM). The multiplication factor to convert mol/m^2 to DU is 2241.15.
+201	ozone, CH4, CO, HCOCH, NO2	atmospheric	surface; upper-air	solar azimuth angle	degrees	Solar azimuth angle is the horizontal angle between the line of sight to the sun and a reference direction which is often due north. The angle is measured clockwise.
+202	ozone	atmospheric	upper-air	ozone reference total ozone	DU	Daily value of total column ozone amount defined as the 'best representative value' in the order of Direct Sun (DS), Zenith Cloud (ZS) and Focused Moon (FM). The multiplication factor to convert mol/m^2 to DU is 2241.15.
 
