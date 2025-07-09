@@ -1,0 +1,14 @@
+name: Call Reusable Workflow
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+jobs:
+  call-reusable:
+    uses: ecmwf-projects/cads-obs-catalogue-manager/.github/workflows/on-push.yml@main
+    secrets:
+      TOKEN: ${{ secrets.REUSABLE_WORKFLOW_PAT }}
