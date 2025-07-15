@@ -11,4 +11,4 @@ jobs:
   call-reusable:
     uses: ecmwf-projects/cads-obs-catalogue-manager/.github/workflows/cdm-check.yml@main
     with:
-      cdm_ref: ${{ github.ref_name }}
+      cdm_ref: ${{ github.head_ref || github.ref_name }}
