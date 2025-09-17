@@ -51,4 +51,3 @@ obs_error@errstat	 numeric		prescribed observation error
 final_obs_error@errstat	 numeric		final observation error (combination of prescribed and persistence errors)
 fg_error@errstat	 numeric		first guess error
 eda_spread@errstat	 numeric  (Unscaled) spread from the EDA. The units depend on the data - they are the same as
-fg_depar@offline  numeric  observed minus first guess value computed offline
