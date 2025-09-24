@@ -1,0 +1,27 @@
+on:
+  push:
+    branches: [master]
+
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  call-reusable:
+    uses: ecmwf-projects/cads-obs-catalogue-manager/.github/workflows/cdm-check.yml@main
+    with:
+      cdm_ref: ${{ github.head_ref || github.ref_name }}
+    secrets:
+      BITBUCKET_TOKEN: ${{ secrets.BITBUCKET_TOKEN }}
+      CATALOGUE_DB: ${{ secrets.CATALOGUE_DB }}
+      CATALOGUE_HOST: ${{ secrets.CATALOGUE_HOST }}
+      CATALOGUE_PASSWORD: ${{ secrets.CATALOGUE_PASSWORD }}
+      CATALOGUE_PORT: ${{ secrets.CATALOGUE_PORT }}
+      CATALOGUE_USER: ${{ secrets.CATALOGUE_USER }}
+      STORAGE_ACCESS_KEY: ${{ secrets.STORAGE_ACCESS_KEY }}
+      STORAGE_HOST: ${{ secrets.STORAGE_HOST }}
+      STORAGE_PORT: ${{ secrets.STORAGE_PORT }}
+      STORAGE_SECRET_KEY: ${{ secrets.STORAGE_SECRET_KEY }}
+      STORAGE_SECURE: ${{ secrets.STORAGE_SECURE }}
+      TEST_INGESTION_DB_PASS: ${{ secrets.TEST_INGESTION_DB_PASS }}
