@@ -159,8 +159,6 @@ variable	parameter_group	domain	sub_domain	name	units	description
 170	humidity	atmospheric	surface	soil_moisture	m3 m-3	Ratio of water volume over sample volume (m^3 water/m^3 soil)
 171	humidity	atmospheric		daily maximum relative humidity	percent	TBD
 172	humidity	atmospheric		daily minimum relative humidity	percent	TBD
-173	temperature	atmospheric		monthly maximum soil temperature	K	Lot 1 is using Ts - WMO abbrev.
-174	temperature	atmospheric		monthly minimum soil temperature	K	Lot 1 is using Ts - WMO abbrev.
 175	wind	atmospheric	surface; upper-air	wind speed 2 meters from earth surface	m s-1	Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector,  with no vertical component. (Vertical motion in the atmosphere has the standard name upward air velocity.) The wind speed is the magnitude of the wind velocity. Lot 1 uses ff  - WMO abbrev.
 176	temperature	atmospheric		soil temperature 5cm from earth surface	K	TBD
 177	temperature	atmospheric		soil temperature 10cm from earth surface	K	TBD
@@ -174,8 +172,6 @@ variable	parameter_group	domain	sub_domain	name	units	description
 185	humidity	atmospheric		soil moisture 100cm from earth surface	m3 m-3	TBD
 186	radiation	atmospheric		hourly maximum downward shortwave irradiance at earth surface	W m-2	Flux density of the solar radiation at the Earth surface
 187	radiation	atmospheric		hourly minimum downward shortwave irradiance at earth surface	W m-2	Flux density of the solar radiation at the Earth surface
-188	temperature	atmospheric		hourly maximum soil temperature	K	Lot 1 is using Ts - WMO abbrev.
-189	temperature	atmospheric		hourly minimum soil temperature	K	Lot 1 is using Ts - WMO abbrev.
 190				precipitable water column era5	kg m-2	TBD (GNSS variable)
 191	methane	atmospheric	upper-air	methane total column	mol/m^2	retrieved total vertical CH4 column between boundaries of the altitude grid. The multiplication factor to convert mol/m2 to molec/cm2 is 6.02214×10^19
 192	methane	atmospheric	upper-air	methane volume mixing ratio	ppmv	vertical CH4 concentration profile from solar absorption measurements 

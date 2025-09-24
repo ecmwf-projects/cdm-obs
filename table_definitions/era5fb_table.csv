@@ -42,7 +42,7 @@ datum_event1@body	bool		observation events (part 1)
 datum_rdbflag@body	bool		observation flags (rdb)
 biascorr@body	 numeric		radiance bias correction
 qc_pge@body	 numeric		var qc a posteriori probability of gross error
-an_depar@body	 numeric		observed minus analysed value
+an_depar@body  numeric		observed minus analysed value
 fg_depar@body	 numeric		observed minus first guess value
 fg_depar@offline	 numeric		observed minus first guess value computed offline
 lsm@surfbody_feedback	 numeric
@@ -50,4 +50,4 @@ stalt@hdr	 numeric		altitude
 obs_error@errstat	 numeric		prescribed observation error
 final_obs_error@errstat	 numeric		final observation error (combination of prescribed and persistence errors)
 fg_error@errstat	 numeric		first guess error
-eda_spread@errstat	 numeric		(Unscaled) spread from the EDA. The units depend on the data - they are the same as
+eda_spread@errstat	 numeric  (Unscaled) spread from the EDA. The units depend on the data - they are the same as
