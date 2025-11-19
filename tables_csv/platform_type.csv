@@ -5,7 +5,7 @@ type,description
 3,Rig / platform
 4,Moored buoy
 5,Drifting buoy (of drifter)
-6,Ice buoy
+6,Ice buoy 
 7,Land station (local network)
 8,Land vehicle
 9,Autonomous marine vehicle

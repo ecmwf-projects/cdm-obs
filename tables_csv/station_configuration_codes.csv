@@ -36,7 +36,7 @@ field_id,field_name,code_value,abbreviation,description
 18,Type of meteorological reporting ship,1,75,Auxiliary ship (AWS)
 18,Type of meteorological reporting ship,2,10,Selected
 18,Type of meteorological reporting ship,3,15,Selected (AWS)
-18,Type of meteorological reporting ship,4,40,Supplementary
+18,Type of meteorological reporting ship,4,40,Supplementary 
 18,Type of meteorological reporting ship,5,45,Supplementary (AWS)
 18,Type of meteorological reporting ship,6,80,Third party
 18,Type of meteorological reporting ship,7,85,Third party (AWS)
