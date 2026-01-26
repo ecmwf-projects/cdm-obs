@@ -1,5 +1,3 @@
-# Description: Table defining frequencies at which data updated / reprocessed
-# Source:
-element_name	kind	external_table	description
-frequency	int (pk)	 	primary key
-description	varchar	 	Description of update frequency
+element_name,kind,external_table,description
+frequency,int (pk), ,primary key
+description,varchar, ,Description of update frequency

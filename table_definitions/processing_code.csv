@@ -1,6 +1,4 @@
-# Description:
-# Source:
-element_name	kind	external_table	description
-code	int (pk)	 	primary key for table
-abbreviation	varchar	 	abbreviation for processing code
-description	varchar	 	description / meaning of processing code
+element_name,kind,external_table,description
+code,int (pk), ,primary key for table
+abbreviation,varchar, ,abbreviation for processing code
+description,varchar, ,description / meaning of processing code

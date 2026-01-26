@@ -1,5 +1,3 @@
-# Description: Spatial extent over which observation is representative
-# Source: WIGOS 1-05
-element_name	kind	external_table	description
-representativeness	int (pk)	 	primary key for table. coded value
-description	varchar	 	meaning / definition of decoded value
+element_name,kind,external_table,description
+representativeness,int (pk), ,primary key for table. coded value
+description,varchar, ,meaning / definition of decoded value

@@ -1,5 +1,3 @@
-# Description: Data format from source prior to ingestion
-# Source:
-element_name	kind	external_table	description
-format	int(pk)	 	primary key for table
-description	varchar	 	description of data format, e.g. NetCDF
+element_name,kind,external_table,description
+format,int(pk), ,primary key for table
+description,varchar, ,"description of data format, e.g. NetCDF"

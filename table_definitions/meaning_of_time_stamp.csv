@@ -1,6 +1,4 @@
-# Description: Meaning / significance of date / time reported for report or observation
-# Source: Based on simplified version of WIGOS 11-03
-element_name	kind	external_table	description
-meaning	int(pk)	 	primary key
-name	varchar	 	abbreviation / simple name for meaning of time stamp
-description	varchar	 	definition of meaning of time stamp
+element_name,kind,external_table,description
+meaning,int(pk), ,primary key
+name,varchar, ,abbreviation / simple name for meaning of time stamp
+description,varchar, ,definition of meaning of time stamp

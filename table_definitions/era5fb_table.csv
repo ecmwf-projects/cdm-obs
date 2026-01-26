@@ -1,53 +1,53 @@
-element_name	kind	external_table	description
-obs_id	 int (pk)	observations_table:observation_id
-report_id	 int	header\_table:report\_id
-source_id	 int	source\_configuration:source\_id
-feedback_method	 int	 feedback\_method:method	 0=online 1=offline
-type	 int		mars key - type of field used to retrieve data
-expver	 varchar		mars key - experiment id
-class	 int		mars key - ecmwf classification for data
-stream	 int		mars key - forecasting system used to generate data
-andate	 int		analysis date
-antime	 int		analysis time
-reportype	 int		mars key - report type for mar
-seqno@hdr	 int		observation sequence
-source@hdr	 varchar		source id of obs. (character*8) : re-analysis purposes
-bufrtype@hdr	 int		bufr-type
-subtype@hdr	 int		bufr subtype for reference
-groupid@hdr	 int		mars key - observation group
-obstype@hdr	 int		observation type
-codetype@hdr	 int		observation code type
-sensor@hdr	 int		ecmwf satellite local (rttov) sensor indicator
-statid@hdr	 varchar		station id (character*8)
-date@hdr	 int		obs. date
-time@hdr	 int		obs. exact time
-report_status@hdr	bool		report's status
-report_event1@hdr	bool		report's events (part 1)
-report_rdbflag@hdr	bool		report's flags
-lat@hdr	 numeric		latitude
-lon@hdr	 numeric		longitude
-lsm@modsurf	 numeric		model land-sea mask
-orography@modsurf	 numeric		model orography
-windspeed10m@modsurf	 numeric		10 metre wind speed
-sonde_type@conv	 int		in order to do bias corr. of temps
-obsvalue@body	 numeric		observed variable
-varno@body	 int		variable number
-vertco_type@body	 int		vertical coordinate type
-vertco_reference_1@body	 numeric		vertical coordinate reference 1
-vertco_reference_2@body	 numeric		vertical coordinate reference 2
-ppcode@conv_body	 int		pressure code
-datum_anflag@body	bool		observation flags
-datum_status@body	bool		new feature equivalent to old def : "status status_t"
-datum_event1@body	bool		observation events (part 1)
-datum_rdbflag@body	bool		observation flags (rdb)
-biascorr@body	 numeric		radiance bias correction
-qc_pge@body	 numeric		var qc a posteriori probability of gross error
-an_depar@body  numeric		observed minus analysed value
-fg_depar@body	 numeric		observed minus first guess value
-fg_depar@offline	 numeric		observed minus first guess value computed offline
-lsm@surfbody_feedback	 numeric
-stalt@hdr	 numeric		altitude
-obs_error@errstat	 numeric		prescribed observation error
-final_obs_error@errstat	 numeric		final observation error (combination of prescribed and persistence errors)
-fg_error@errstat	 numeric		first guess error
-eda_spread@errstat	 numeric  (Unscaled) spread from the EDA. The units depend on the data - they are the same as
+element_name,kind,external_table,description
+obs_id, int (pk),observations_table:observation_id
+report_id, int,header\_table:report\_id
+source_id, int,source\_configuration:source\_id
+feedback_method, int, feedback\_method:method, 0=online 1=offline
+type, int,,mars key - type of field used to retrieve data
+expver, varchar,,mars key - experiment id
+class, int,,mars key - ecmwf classification for data
+stream, int,,mars key - forecasting system used to generate data
+andate, int,,analysis date
+antime, int,,analysis time
+reportype, int,,mars key - report type for mar
+seqno@hdr, int,,observation sequence
+source@hdr, varchar,,source id of obs. (character*8) : re-analysis purposes
+bufrtype@hdr, int,,bufr-type
+subtype@hdr, int,,bufr subtype for reference
+groupid@hdr, int,,mars key - observation group
+obstype@hdr, int,,observation type
+codetype@hdr, int,,observation code type
+sensor@hdr, int,,ecmwf satellite local (rttov) sensor indicator
+statid@hdr, varchar,,station id (character*8)
+date@hdr, int,,obs. date
+time@hdr, int,,obs. exact time
+report_status@hdr,bool,,report's status
+report_event1@hdr,bool,,report's events (part 1)
+report_rdbflag@hdr,bool,,report's flags
+lat@hdr, numeric,,latitude
+lon@hdr, numeric,,longitude
+lsm@modsurf, numeric,,model land-sea mask
+orography@modsurf, numeric,,model orography
+windspeed10m@modsurf, numeric,,10 metre wind speed
+sonde_type@conv, int,,in order to do bias corr. of temps
+obsvalue@body, numeric,,observed variable
+varno@body, int,,variable number
+vertco_type@body, int,,vertical coordinate type
+vertco_reference_1@body, numeric,,vertical coordinate reference 1
+vertco_reference_2@body, numeric,,vertical coordinate reference 2
+ppcode@conv_body, int,,pressure code
+datum_anflag@body,bool,,observation flags
+datum_status@body,bool,,"new feature equivalent to old def : ""status status_t"""
+datum_event1@body,bool,,observation events (part 1)
+datum_rdbflag@body,bool,,observation flags (rdb)
+biascorr@body, numeric,,radiance bias correction
+qc_pge@body, numeric,,var qc a posteriori probability of gross error
+an_depar@body  numeric,,observed minus analysed value
+fg_depar@body, numeric,,observed minus first guess value
+fg_depar@offline, numeric,,observed minus first guess value computed offline
+lsm@surfbody_feedback, numeric
+stalt@hdr, numeric,,altitude
+obs_error@errstat, numeric,,prescribed observation error
+final_obs_error@errstat, numeric,,final observation error (combination of prescribed and persistence errors)
+fg_error@errstat, numeric,,first guess error
+eda_spread@errstat, numeric  (Unscaled) spread from the EDA. The units depend on the data - they are the same as

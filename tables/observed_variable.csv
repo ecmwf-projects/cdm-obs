@@ -64,7 +64,7 @@ variable,parameter_group,domain,sub_domain,name,units,description
 64,radiation,atmospheric,,downward shortwave irradiance at toa,W m-2,Flux density of the solar radiation at the top of the atmosphere
 65,radiation,atmospheric,,earth surface shortwave bidirectional reflectance,percent,Reflectance of the Earth surface as a function of the viewing angle and the illumination angle in the range 0.4-0.7 micro m . The distribution of this variable is represented by the Bidirectional Reflectance Distribution Function (BRDF)
 66,radiation,atmospheric,,fraction of absorbed par ,percent,Fraction of PAR absorbed by vegetation (land or marine) for photosynthesis processes (generally around the 'red' )
-67,radiation,atmospheric,,global radiation,W m-2,"The part of the global radiation in-cident on a surface orthogonal (or “normal”) to the sun’s beam, which originates from the solid angle subtended by the sun’s disk. It is also called direct normal irradiance."
+67,radiation,atmospheric,,global radiation,W m-2,"The part of the global radiation in-cident on a surface orthogonal (or normal) to the suns beam, which originates from the solid angle subtended by the suns disk. It is also called direct normal irradiance."
 68,radiation,atmospheric,,longwave earth surface emissivity,percent,TBD
 69,radiation,atmospheric,,longwave radiation,W m-2,TBD
 70,radiation,atmospheric,,meteorological optical range,m,Meteorological optical range at surface
@@ -173,7 +173,7 @@ variable,parameter_group,domain,sub_domain,name,units,description
 186,radiation,atmospheric,,hourly maximum downward shortwave irradiance at earth surface,W m-2,Flux density of the solar radiation at the Earth surface
 187,radiation,atmospheric,,hourly minimum downward shortwave irradiance at earth surface,W m-2,Flux density of the solar radiation at the Earth surface
 190,,,,precipitable water column era5,kg m-2,TBD (GNSS variable)
-191,methane,atmospheric,upper-air,methane total column,mol/m^2,retrieved total vertical CH4 column between boundaries of the altitude grid. The multiplication factor to convert mol/m2 to molec/cm2 is 6.02214×10^19.
+191,methane,atmospheric,upper-air,methane total column,mol/m^2,retrieved total vertical CH4 column between boundaries of the altitude grid. The multiplication factor to convert mol/m2 to molec/cm2 is 6.02214x10^19.
 192,methane,atmospheric,upper-air,methane volume mixing ratio,ppmv,vertical CH4 concentration profile from solar absorption measurements
 193,methane,atmospheric,upper-air,methane partial column,mol/m^2,CH4 partial column concentration in the considered retrieval layer. The multiplication factor to convert mol/m2 to molec/cm2 is 6.02214x10^19.
 194,carbon monoxide,atmospheric,upper-air,carbon monoxide total column,mol/m^2,retrieved total vertical CO column between boundaries of the altitude grid. The multiplication factor to convert mol/m2 to molec/cm2 is 6.02214x10^19.

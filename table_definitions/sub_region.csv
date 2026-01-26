@@ -1,8 +1,6 @@
-# Description: Sub-region / country where observation was made, or recruiting country for mobile platforms			
-# Source:
-element_name	kind	external_table	description
-sub_region	int(pk)	 	primary key
-type	varchar	 	type of sub region, e.g. country, regional sea etc
-code	varchar	 	abbreviation or character code
-alpha_3_code	varchar		ISO 3 character abbreviation of country
-name	varchar	 	decoded value
+element_name,kind,external_table,description
+sub_region,int(pk), ,primary key
+type,varchar, ,"type of sub region, e.g. country, regional sea etc"
+code,varchar, ,abbreviation or character code
+alpha_3_code,varchar,,ISO 3 character abbreviation of country
+name,varchar, ,decoded value

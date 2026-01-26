@@ -1,6 +1,4 @@
-# Description: Region where observation was made
-# Source: WIGOS 3-01
-element_name	kind	external_table	description
-region	int(pk)	 	primary key for table
-WMO_region	int	 	WMO region that this corresponds to
-description	varchar	 	Definition of region
+element_name,kind,external_table,description
+region,int(pk), ,primary key for table
+WMO_region,int, ,WMO region that this corresponds to
+description,varchar, ,Definition of region

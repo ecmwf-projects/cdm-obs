@@ -1,6 +1,4 @@
-# Description: Original report type for this report / observaiton
-# Source:
-element_name	kind	external_table	description
-type	int(pk)	 	primary key for table
-abbreviation	varchar	 	abbreviation used to indicate report type (e.g. SHIP)
-description	varchar	 	description of report type, e.g. routine weather report made by ship
+element_name,kind,external_table,description
+type,int(pk), ,primary key for table
+abbreviation,varchar, ,abbreviation used to indicate report type (e.g. SHIP)
+description,varchar, ,"description of report type, e.g. routine weather report made by ship"
