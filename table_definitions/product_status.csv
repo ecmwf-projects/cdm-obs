@@ -1,6 +1,4 @@
-# Description:
-# Source:
-element_name	kind	external_table	description
-status	int(pk)	 	primary key for table
-abbreviation	varchar	 	abbreviation used to indicate product status
-description	varchar	 	Meaning of product status
+element_name,kind,external_table,description
+status,int(pk), ,primary key for table
+abbreviation,varchar, ,abbreviation used to indicate product status
+description,varchar, ,Meaning of product status

@@ -1,5 +1,3 @@
-# Description: Automation status of the station and / or individual observation
-# Source:
-element_name	kind	external_table	description
-automation	int(pk)	 	Unique ID for entry
-description	varchar	 	description of automation status (e.g. automatic observations, manual observation etc)
+element_name,kind,external_table,description
+automation,int(pk), ,Unique ID for entry
+description,varchar, ,"description of automation status (e.g. automatic observations, manual observation etc)"

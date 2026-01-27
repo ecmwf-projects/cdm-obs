@@ -1,9 +1,0 @@
-field_id	field_name	code_value	abbreviation	description	start_date	end_date
-0	include descent	0	NA	Descent excluded	NA	NA
-0	include descent	1	NA	Descent included	NA	NA
-1	processing code	0	cc	Calibration correction (of humidity sensors)	NA	NA
-1	processing code	1	HRC	Humidity radiation correction	NA	NA
-1	processing code	2	or	Outlier removal (remove temperature spikes)	NA	NA
-1	processing code	3	pGPS	Combination of pressure and GPS	NA	NA
-1	processing code	4	TL	Time-lag correction	NA	NA
-1	processing code	5	TRC	Temperature radiation correction	NA	NA

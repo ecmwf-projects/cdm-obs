@@ -1,6 +1,4 @@
-# Description: 
-# Source:
-element_name	kind	external_table	description
-level	int(pk)	 	primary key for table
-abbreviation	varchar	 	abbreviation used to indicate processing level
-description	varchar	 	definition of processing level
+element_name,kind,external_table,description
+level,int(pk), ,primary key for table
+abbreviation,varchar, ,abbreviation used to indicate processing level
+description,varchar, ,definition of processing level

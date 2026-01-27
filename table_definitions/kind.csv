@@ -1,5 +1,3 @@
-# Description:
-# Source:
-element_name	kind	external_table	description
-kind	int(pk)	 	primary key
-description	varchar	 	kind of data (int, numeric etc)
+element_name,kind,external_table,description
+kind,int(pk), ,primary key
+description,varchar, ,"kind of data (int, numeric etc)"

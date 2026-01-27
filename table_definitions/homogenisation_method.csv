@@ -1,6 +1,4 @@
-# Description:
-# Source:
-element_name	kind	external_table	description
-method	int (pk)		Primary key for table
-description	varchar		Description of method
-reference	varchar		DOI or reference for method
+element_name,kind,external_table,description
+method,int (pk),,Primary key for table
+description,varchar,,Description of method
+reference,varchar,,DOI or reference for method
