@@ -1,0 +1,77 @@
+name: CDM-OBS Table Change Proposal
+description: Use this template to propose edits or additions to CDM-OBS model tables.
+title: "[Table Change] "
+labels: ["table-edit", "needs-review"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 1️⃣ Contributor Information
+        - **Name:** 
+        - **Role:** 
+        - **GitHub handle/email:** 
+
+  - type: input
+    id: table_file
+    attributes:
+      label: Target Table File Name
+      description: Enter the file name of the table from cdm-obs/tables
+      placeholder: instruments.csv
+      required: true
+
+  - type: textarea
+    id: table_description
+    attributes:
+      label: Table Description
+      description: Brief description of the table
+      placeholder: List of observation instruments used in CDM-OBS
+      required: true
+
+  - type: checkboxes
+    id: change_type
+    attributes:
+      label: Type of Change
+      options:
+        - Correction (typo, value fix)
+        - New entry addition
+        - Unit or value update
+        - Structural change (column rename, new column)
+        - Metadata enhancement
+        - Deprecation or retirement
+        - Other
+      required: true
+
+  - type: textarea
+    id: current_content
+    attributes:
+      label: Current Content (before change)
+      description: Paste relevant snippet from the table
+      required: true
+
+  - type: textarea
+    id: proposed_content
+    attributes:
+      label: Proposed Content (after change)
+      description: Show the updated snippet clearly
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Motivation & Rationale
+      description: Explain why this change is needed and reference standards/docs
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact Assessment
+      description: Downstream systems affected, backward compatibility, testing/validation
+
+  - type: textarea
+    id: reviewer_notes
+    attributes:
+      label: Reviewer Notes / Additional Comments
+      description: Optional guidance for reviewers
+
