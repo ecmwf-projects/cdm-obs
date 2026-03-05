@@ -8,7 +8,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## 1️⃣ Contributor Information
+        ## Contributor Information
         - **Name:** 
         - **Role:** 
         - **GitHub handle/email:** 
@@ -19,6 +19,7 @@ body:
       label: Target Table File Name
       description: Enter the file name of the table from cdm-obs/tables
       placeholder: instruments.csv
+    validations:
       required: true
 
   - type: textarea
@@ -27,6 +28,7 @@ body:
       label: Table Description
       description: Brief description of the table
       placeholder: List of observation instruments used in CDM-OBS
+    validations:
       required: true
 
   - type: checkboxes
@@ -34,13 +36,14 @@ body:
     attributes:
       label: Type of Change
       options:
-        - Correction (typo, value fix)
-        - New entry addition
-        - Unit or value update
-        - Structural change (column rename, new column)
-        - Metadata enhancement
-        - Deprecation or retirement
-        - Other
+        - label: Correction (typo, value fix)
+        - label: New entry addition
+        - label: Unit or value update
+        - label: Structural change (column rename, new column)
+        - label: Metadata enhancement
+        - label: Deprecation or retirement
+        - label: Other
+    validations:
       required: true
 
   - type: textarea
@@ -48,6 +51,7 @@ body:
     attributes:
       label: Current Content (before change)
       description: Paste relevant snippet from the table
+    validations:
       required: true
 
   - type: textarea
@@ -55,6 +59,7 @@ body:
     attributes:
       label: Proposed Content (after change)
       description: Show the updated snippet clearly
+    validations:
       required: true
 
   - type: textarea
