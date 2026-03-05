@@ -5,13 +5,29 @@ labels: ["table-edit", "needs-review"]
 assignees: []
 
 body:
-  - type: markdown
+  - type: input
+    id: contributor_name
     attributes:
-      value: |
-        ## Contributor Information
-        - **Name:** 
-        - **Role:** 
-        - **GitHub handle/email:** 
+      label: Contributor Name
+      placeholder: Enter your full name
+    validations:
+      required: true
+
+  - type: input
+    id: contributor_role
+    attributes:
+      label: Role
+      placeholder: Task Lead / Reviewer / etc.
+    validations:
+      required: true
+
+  - type: input
+    id: contributor_contact
+    attributes:
+      label: GitHub Handle or Email
+      placeholder: username or email
+    validations:
+      required: true
 
   - type: input
     id: table_file
@@ -79,4 +95,3 @@ body:
     attributes:
       label: Reviewer Notes / Additional Comments
       description: Optional guidance for reviewers
-
