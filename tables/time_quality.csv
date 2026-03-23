@@ -5,3 +5,4 @@ quality,description
 3,"Time missing, date valid. Report set to local midday"
 4,Day missing
 5,Invalid date / time
+6,Timestamp not checked
