@@ -100,8 +100,8 @@ variable,parameter_group,domain,sub_domain,name,units,description
 101,weather,atmospheric,surface,past weather 2,coded,past weather 2 - most frequent phomenon (used in synoptic maps)
 102,weather,atmospheric,surface,present weather,coded,present weather (ww)
 103,weather,,,Total lightning density,Dimensionless,Total number of detected flashes in the corresponding time interval and the space unit. The space unit (grid box) should be equal to the horizontal resolution and the accumulation time to the observing cycle
-104,wind,atmospheric,surface; upper-air,eastward wind speed,m s-1,"Eastward indicates a vector component which is positive when directed eastward (negative westward). Wind is defined as a two-dimensional (horizontal) air velocity vector,  with no vertical component. (Vertical motion in the atmosphere has the standard name upward air velocity.)"
-105,wind,atmospheric,surface; upper-air,northward wind speed,m s-1,"Northward indicates a vector component which is positive when directed northward (negative southward). Wind is defined as a two-dimensional (horizontal) air velocity vector,  with no vertical component. (Vertical motion in the atmosphere has the standard name upward air velocity.)"
+104,wind,atmospheric,surface; upper-air,eastward wind speed,m s-1,Projection of the horizontal air velocity vector onto a horizontal unit velocity vector (1 m s^-1) that points towards the East.
+105,wind,atmospheric,surface; upper-air,northward wind speed,m s-1,Projection of the horizontal air velocity vector onto a horizontal unit velocity vector (1 m s^-1) that points towards the North.
 106,wind,atmospheric,surface; upper-air,wind from direction,degree,direction from which the wind is blowing Lot 1 uses dd  - WMO abbrev.
 107,wind,atmospheric,surface; upper-air,wind speed,m s-1,"Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector,  with no vertical component. (Vertical motion in the atmosphere has the standard name upward air velocity.) The wind speed is the magnitude of the wind velocity. Lot 1 uses ff  - WMO abbrev."
 108,wind,atmospheric,surface,wind speed of gust,m s-1,"Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector,  with no vertical component. (Vertical motion in the atmosphere has the standard name upward air velocity.) The wind speed is the magnitude of the wind velocity. A gust is a sudden brief period of high wind speed. In an observed timeseries of wind speed,  the gust wind speed can be indicated by a cell methods of maximum for the time-interval. In an atmospheric model which has a parametrised calculation of gustiness,  the gust wind speed may be separately diagnosed from the wind speed. Lot 1 uses fx  - WMO abbrev."
@@ -125,8 +125,6 @@ variable,parameter_group,domain,sub_domain,name,units,description
 126,temperature,atmospheric,surface; upper air,air temperature,K,Air temperature (from profile measurement)
 137,humidity,atmospheric,surface; upper air,air dewpoint,K,Dewpoint measurement (from profile measurement)
 138,humidity,atmospheric,surface; upper air,relative humidity,1,Relative humidity (from profile measurement)
-139,wind,atmospheric,surface; upper air,eastward wind speed,m s-1,Eastward wind speed (from profile measurement)
-140,wind,atmospheric,surface; upper air,northward wind speed,m s-1,Northward wind speed (from profile measurement)
 141,radiation,atmospheric,surface; upper air,solar zenith angle,degrees,solar zenith angle
 142,pressure,atmospheric,upper air,pressure,Pa,pressure
 143,,,,time since launch,s,Time since launch of radiosonde
