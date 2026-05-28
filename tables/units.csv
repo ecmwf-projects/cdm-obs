@@ -155,3 +155,4 @@ units,name,abbreviation,base_units
 1013,Vienna Inches,NULL,NULL
 1014,Swedish Inches,NULL,NULL
 1015,Amsterdam Inches,NULL,NULL
+1016,dimensionless/unitless ,NULL,NULL
