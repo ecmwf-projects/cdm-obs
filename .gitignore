@@ -25,3 +25,4 @@
 *.swp
 *.tex
 .conda
+.idea
