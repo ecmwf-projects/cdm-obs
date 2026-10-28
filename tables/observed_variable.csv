@@ -1,23 +1,23 @@
 variable,parameter_group,domain,sub_domain,name,units,description
-0,aerosols,,,aerosol absorption optical depth,Dimensionless,Vertical column integral of spectral aerosol absorption coefficient: AAOD = exp(-K. Dz) where K is the absorption coefficient [km-1] and Dz the vertical path [km]
-1,aerosols,,,aerosol column burden,g m-2,2D field of the column burden of condensed particles in the atmosphere
-2,aerosols,,,aerosol dust concentration,g kg-1,3-D field of concentration of dust or sand in the atmosphere
-3,aerosols,,,aerosol effective radius,micro m,"3D field of mean aerosol particle size, defined as the ratio of the third and second moments of the number size distribution of aerosol particles.  Requested in the troposphere (assumed height: 12 km) and as columnar average."
-4,aerosols,,,aerosol extinction coefficient,m-1,3D field of spectral volumetric extinction cross-section of aerosol particles.
-5,aerosols,,,aerosol mass mixing ratio,g kg-1,3D field of the mass mixing ratio of condensed particles in the atmosphere
-6,aerosols,,,aerosol optical depth,Dimensionless,The AOD is the effective depth of the aerosol column from the viewpoint of radiation propagation: Vertical column integral of spectral aerosol extinction coefficient AOD = exp(-K. Dz) where K is the extinction coefficient [km-1 ] and Dz the vertical path [km]
-7,aerosols,,,aerosol species mole fraction,moles per mole of dry air ,"3D field of the mole fraction of condensed-phase chemical species (e.g., sulfate, nitrate, ammonium, elemental carbon, organic carbon),  in the atmosphere"
-8,aerosols,,,aerosol species total column burden,moles m-2,"2D field of the total column burden concentration of condensed-phase chemical species (e.g., sulfate, nitrate, ammonium, elemental carbon, organic carbon), in the atmosphere"
-9,aerosols,,,aerosol type,coded,"Selection, out of a pre-defined set of aerosol classes, that best fits an input data set (observed or modeled). The pre-defined set of aerosol classes includes specification of the particle composition, mixing state, complex refractive index, and shape as a function of particle size. The definition of aerosol type includes specification of all the classes as well as the algorithm used to choose the best fit to the input data."
-10,aerosols,,,aerosol volcanic ash,g kg-1,3D field of mass mixing ratio of volcanic ash
-11,aerosols,,,total column aerosol volcanic ash ,g m-2,Field of total column mass of volcanic ash
-12,aerosols,,,air conductivity ,km,TBD
-13,albedo,,,blue ice and snow albedo,percent,TBD
-14,albedo,,,blue ice bidirectional reflectance,sr-1,TBD
-15,albedo,,,clean glacier ice albedo,percent,TBD
-16,albedo,,,dirty glacier ice albedo,percent,TBD
-17,albedo,,,earth surface albedo,percent,Hemispherically integrated reflectance of the Earth surface in the range 0.4 - 0.7 micro-m
-18,albedo,,,snow bidirectional reflectance,sr-1,TBD
+0,aerosols,atmospheric,upper-air,aerosol absorption optical depth,dimensionless/unitless,Vertical column integral of spectral aerosol absorption coefficient: AAOD = exp(-K. Dz) where K is the absorption coefficient [km-1] and Dz the vertical path [km]
+1,aerosols,atmospheric,upper-air,aerosol column burden,g m-2,2D field of the column burden of condensed particles in the atmosphere
+2,aerosols,atmospheric,upper-air,aerosol dust concentration,g kg-1,3-D field of concentration of dust or sand in the atmosphere
+3,aerosols,atmospheric,upper-air,aerosol effective radius,micro m,"3D field of mean aerosol particle size, defined as the ratio of the third and second moments of the number size distribution of aerosol particles.  Requested in the troposphere (assumed height: 12 km) and as columnar average."
+4,aerosols,atmospheric,upper-air,aerosol extinction coefficient,m-1,3D field of spectral volumetric extinction cross-section of aerosol particles.
+5,aerosols,atmospheric,upper-air,aerosol mass mixing ratio,g kg-1,3D field of the mass mixing ratio of condensed particles in the atmosphere
+6,aerosols,atmospheric,upper-air,aerosol optical depth,dimensionless/unitless,The AOD is the effective depth of the aerosol column from the viewpoint of radiation propagation: Vertical column integral of spectral aerosol extinction coefficient AOD = exp(-K. Dz) where K is the extinction coefficient [km-1 ] and Dz the vertical path [km]
+7,aerosols,atmospheric,upper-air,aerosol species mole fraction,moles per mole of dry air ,"3D field of the mole fraction of condensed-phase chemical species (e.g., sulfate, nitrate, ammonium, elemental carbon, organic carbon),  in the atmosphere"
+8,aerosols,atmospheric,upper-air,aerosol species total column burden,moles m-2,"2D field of the total column burden concentration of condensed-phase chemical species (e.g., sulfate, nitrate, ammonium, elemental carbon, organic carbon), in the atmosphere"
+9,aerosols,atmospheric,upper-air,aerosol type,coded,"Selection, out of a pre-defined set of aerosol classes, that best fits an input data set (observed or modeled). The pre-defined set of aerosol classes includes specification of the particle composition, mixing state, complex refractive index, and shape as a function of particle size. The definition of aerosol type includes specification of all the classes as well as the algorithm used to choose the best fit to the input data."
+10,aerosols,atmospheric,upper-air,aerosol volcanic ash,g kg-1,3D field of mass mixing ratio of volcanic ash
+11,aerosols,atmospheric,upper-air,total column aerosol volcanic ash ,g m-2,Field of total column mass of volcanic ash
+12,aerosols,atmospheric,upper-air,air conductivity ,km,TBD
+13,albedo,atmospheric,surface,blue ice and snow albedo,percent,"Hemispherically integrated reflectance of blue ice and snow surfaces, distinguishing the comparatively lower reflectance of exposed, bubble-free glacial (blue) ice from the higher reflectance of fresh or seasonal snow cover"
+14,albedo,atmospheric,surface,blue ice bidirectional reflectance,sr-1,Bidirectional reflectance of blue ice as a function of illumination and viewing geometry.
+15,albedo,atmospheric,surface,clean glacier ice albedo,percent,TBD
+16,albedo,atmospheric,surface,dirty glacier ice albedo,percent,TBD
+17,albedo,atmospheric,surface,earth surface albedo,percent,Hemispherically integrated reflectance of the Earth surface in the range 0.4 - 0.7 micro-m
+18,albedo,atmospheric,surface,snow bidirectional reflectance,sr-1,"Reflectance of snow measured relative to both the sun's angle and the observation angle, capturing how snow reflects differently depending on viewing geometry."
 19,cloud,atmospheric,upper-air,cloud base height,m,cloud base height (hb)
 20,cloud,atmospheric,upper-air,cloud base lowest height,coded,Height above surface of the base of the lowest cloud seen (coded 0-9)
 21,cloud,atmospheric,upper-air,cloud cover,Okta or percent,3D field of fraction of sky filled by clouds.
@@ -28,20 +28,20 @@ variable,parameter_group,domain,sub_domain,name,units,description
 26,cloud,atmospheric,upper-air,lowest cloud amout,Okta,low or (if low clouds don't exist) middle cloud amount
 27,cloud,atmospheric,upper-air,middle cloud type,coded,type of middle clouds (cm)
 28,cloud,atmospheric,upper-air,total cloud amount,Okta,total amount of clouds
-29,evaporation,atmospheric,,evaporation,mm,TBD
-30,evaporation,atmospheric,,evaporation,kg m-2 s-1,TBD
-31,evaporation,atmospheric,,potential evapotranspiration,mm day-1,Quantity of water evaporated from the soil and plants when the ground is at its natural moisture content.
-32,evaporation,atmospheric,,real evapotranspiration,mm day-1,TBD
-33,humidity,atmospheric,,absolute humidity,g m-3,"measure of water vapor (moisture) in the air, regardless of temperature"
+29,evaporation,atmospheric,surface,evaporation,mm,TBD
+30,evaporation,atmospheric,surface,evaporation,kg m-2 s-1,TBD
+31,evaporation,atmospheric,surface,potential evapotranspiration,mm day-1,Quantity of water evaporated from the soil and plants when the ground is at its natural moisture content.
+32,evaporation,atmospheric,surface,real evapotranspiration,mm day-1,TBD
+33,humidity,atmospheric,surface; upper-air,absolute humidity,g m-3,"measure of water vapor (moisture) in the air, regardless of temperature"
 34,humidity,atmospheric,surface; upper-air,dew point depression,K,Dew point depression is also called dew point deficit. It is the amount by which the air temperature exceeds its dew point temperature. Dew point temperature is the temperature at which a parcel of air reaches saturation upon being cooled at constant pressure and specific humidity.
 36,humidity,atmospheric,surface; upper-air,dew point temperature,K,Dew point temperature is the temperature at which a parcel of air reaches saturation upon being cooled at constant pressure and specific humidity.
-37,humidity,atmospheric,surface; upper-air,ice bulb temperature,K,TBD
+37,humidity,atmospheric,surface; upper-air,ice bulb temperature,K,Measured with an ice-coated thermometer bulb instead of a water-wetted one. Used in freezing conditions to estimate humidity
 38,humidity,atmospheric,surface; upper-air,relative humidity,percent,Relative humidity is the ratio of the amount of atmospheric moisture present relative to the amount that would be present if the air were saturated with respect to water or ice to be specified in the metadata
 39,humidity,atmospheric,surface; upper-air,specific humidity,g kg-1,specific means per unit mass. Specific humidity is the mass fraction of water vapor in (moist) air.
-40,humidity,atmospheric,,water vapour pressure,hPa,TBD
+40,humidity,atmospheric,surface; upper-air,water vapour pressure,hPa,TBD
 41,humidity,atmospheric,surface; upper-air,wet bulb temperature,K,TBD
-43,ice,,,ice thickness,m,Thickness of the ice sheet. It is related to sea-ice elevation and ice density
-44,precipitation,atmospheric,,accumulated precipitation,mm,accumulated precipitation over specified period
+43,ice,oceanic,surface; sub-surface,ice thickness,m,Thickness of the ice sheet. It is related to sea-ice elevation and ice density
+44,precipitation,atmospheric,surface,accumulated precipitation,mm,accumulated precipitation over specified period
 45,precipitation,atmospheric,,fresh snow,mm,TBD
 46,precipitation,atmospheric,,hydrometeor type,Code table,"3D field of the predominant form of condensed water in a volume of free atmosphere, including liquid cloud, rain, ice crystals, snow, graupel and hail. (This variable replaces ""precipitation type"")."
 47,precipitation,atmospheric,,precipitation  ,g m-2 s-1,Precipitation (liquid or solid)
