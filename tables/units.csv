@@ -27,35 +27,35 @@ units,name,abbreviation,base_units
 80,becquerel,Bq,s-1
 81,grey,Gy,m2 s-2
 82,sievert,Sv,m2 s-2
-110,degree (angle),deg,NULL
-111,minute (angle),',NULL
-112,second (angle),"""",NULL
-120,litre,l or L,NULL
-130,minute (time),min,NULL
-131,hour,h,NULL
-132,day,d,NULL
-150,tonne,t,NULL
+110,degree (angle),deg,rad
+111,minute (angle),',rad
+112,second (angle),"""",rad
+120,litre,l or L,m3
+130,minute (time),min,s
+131,hour,h,s
+132,day,d,s
+150,tonne,t,kg
 160,electron,eV,EV
-161,atomic,unit,u
+161,atomic mass unit,u or Da,kg
 170,astronomic,AU,ASU
-171,parsec,pc,NULL
-200,nautical,,NULL
-201,knot,kt,NULL
+171,parsec,pc,m
+200,nautical mile,nmi,m
+201,knot,kt,m s-1
 210,decibel,dB,NULL
-220,hectare,ha,NULL
-230,week,,NULL
-231,year,a,NULL
-300,per cent,\%,NULL
+220,hectare,ha,m2
+230,week,wk,s
+231,year,a,s
+300,percent,percent,1
 301,parts per thousand,ppt,NULL
 302,parts per million,ppm,NULL
 303,parts per million by volume,ppmv,NULL
 310,eighths of cloud,okta,NULL
-320,degrees true,deg,NULL
-321,degrees per second,deg/s,NULL
+320,degrees true,deg,rad
+321,degrees per second,deg/s,rad s-1
 350,degrees Celsius,C,NULL
 351,degrees Celsius per metre,C/m,NULL
 352,degrees Celsius per 100 metres,m,m
-360,Dobson Unit,DU,NULL
+360,Dobson Unit,DU,mol m-2
 430,month,mon,NULL
 441,per second (same as hertz),/s,NULL
 442,per second squared,s-2,NULL
