@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import csv
 import html
+import os
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -18,6 +19,9 @@ SKIPPED_TABLE_SUFFIXES: Final[tuple[str, ...]] = ("_optional.csv", "_fields.csv"
 COLUMN_HEADER_ROW: Final[str] = (
     "<thead><tr><th>Column</th><th>Type</th><th>PK</th><th>Reference</th><th>Description</th></tr></thead>"
 )
+EC_LOGO_PATH: Final[str] = "png/ec_logo_small.png"
+COPERNICUS_LOGO_PATH: Final[str] = "png/copernicus_logo.png"
+ECMWF_LOGO_PATH: Final[str] = "png/ECMWF_logo.png"
 
 
 @dataclass
@@ -162,6 +166,19 @@ def value_table_html(value_table: ValueTable) -> str:
     )
 
 
+def get_cdm_version() -> str:
+    """Resolve the current CDM version from GitHub refs."""
+    github_ref_type = os.environ.get("GITHUB_REF_TYPE", "").strip()
+    github_ref_name = os.environ.get("GITHUB_REF_NAME", "").strip()
+    github_ref = os.environ.get("GITHUB_REF", "").strip()
+
+    if github_ref_type == "tag" and github_ref_name:
+        return github_ref_name
+    if github_ref.startswith("refs/tags/"):
+        return github_ref.removeprefix("refs/tags/").strip() or github_ref_name
+    return "unreleased"
+
+
 def build_overview_svg() -> str:
     """Build a static SVG overview of key CDM table relationships."""
     # Derived from graphviz/cdm_schematic_simple.gv core relationships.
@@ -247,6 +264,7 @@ def build_html(table_map: dict[str, list[Column]], value_tables: dict[str, Value
     value_names = sorted(value_tables.keys())
     table_name_set = set(names)
     value_name_set = set(value_names)
+    cdm_version = html.escape(get_cdm_version())
 
     main_nav = "".join(f'<li><a href="#table-{html.escape(name)}">{html.escape(name)}</a></li>' for name in names)
     value_nav = "".join(f'<li><a href="#values-{html.escape(name)}">{html.escape(name)} values</a></li>' for name in value_names)
@@ -265,45 +283,212 @@ def build_html(table_map: dict[str, list[Column]], value_tables: dict[str, Value
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CDM SQL Schema Explorer</title>
+  <meta name="theme-color" content="#0b1f33" />
+  <title>Copernicus Climate SQL Schema Explorer</title>
   <style>
-    :root {{ color-scheme: light dark; }}
-    body {{ font-family: Inter, Arial, sans-serif; margin: 0; background: #f6f7f9; color: #1f2937; }}
-    .layout {{ display: grid; grid-template-columns: 280px 1fr; min-height: 100vh; }}
-    nav {{ padding: 16px; background: #111827; color: #e5e7eb; position: sticky; top: 0; height: 100vh; overflow: auto; }}
-    nav h1 {{ font-size: 16px; margin: 0 0 12px 0; }}
+    :root {{
+      color-scheme: light;
+      --bg: #f3f7fb;
+      --panel: #ffffff;
+      --panel-soft: #f7fafc;
+      --border: #d4dee8;
+      --text: #102033;
+      --muted: #526579;
+      --nav-bg: linear-gradient(180deg, #0b1f33 0%, #102b47 100%);
+      --nav-border: #173551;
+      --accent: #c8a100;
+      --accent-deep: #0e5ea8;
+      --accent-soft: #e8f1fb;
+      --footer-bg: #081521;
+      --footer-text: #d8e3ee;
+    }}
+    * {{ box-sizing: border-box; }}
+    html {{ scroll-behavior: smooth; }}
+    body {{
+      font-family: Verdana, Calibri, Arial, sans-serif;
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(14, 94, 168, 0.12), transparent 32%),
+        radial-gradient(circle at top right, rgba(200, 161, 0, 0.08), transparent 26%),
+        linear-gradient(180deg, #f8fbfd 0%, var(--bg) 100%);
+      color: var(--text);
+    }}
+    a {{ color: var(--accent-deep); }}
+    a:hover {{ color: #083e73; }}
+    .layout {{ display: grid; grid-template-columns: 300px 1fr; min-height: 100vh; }}
+    nav {{
+      padding: 20px 18px;
+      background: var(--nav-bg);
+      color: #eaf2f8;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: auto;
+      border-right: 1px solid var(--nav-border);
+    }}
+    nav h1 {{
+      font-size: 16px;
+      line-height: 1.3;
+      margin: 0 0 8px 0;
+      color: #ffffff;
+      letter-spacing: 0.02em;
+    }}
+    nav p {{
+      margin: 0 0 16px 0;
+      color: #c8d7e4;
+      font-size: 13px;
+      line-height: 1.5;
+    }}
     nav ul {{ list-style: none; margin: 0; padding: 0; }}
-    nav li a {{ color: #d1d5db; text-decoration: none; display: block; padding: 6px 0; font-size: 14px; }}
-    nav li strong {{ color: #f9fafb; font-size: 13px; }}
-    main {{ padding: 20px; }}
-    .table-card {{ background: #fff; border: 1px solid #d1d5db; border-radius: 8px; margin-bottom: 16px; padding: 16px; }}
-    .table-card h2 {{ margin: 0 0 10px 0; font-size: 20px; }}
+    nav li a {{
+      color: #d6e5f1;
+      text-decoration: none;
+      display: block;
+      padding: 6px 0;
+      font-size: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }}
+    nav li a:hover {{ color: #ffffff; }}
+    nav li strong {{ color: #ffffff; font-size: 13px; }}
+    .nav-brand {{
+      padding: 14px 14px 12px 14px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.06);
+    }}
+    .nav-brand img {{ display: block; width: 180px; max-width: 100%; height: auto; margin: 0 0 12px 0; }}
+    .nav-brand .kicker {{ margin: 0 0 4px 0; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #c8d7e4; }}
+    .nav-brand .title {{ margin: 0; font-size: 18px; line-height: 1.2; color: #ffffff; }}
+    .nav-brand .summary {{ margin: 10px 0 0 0; font-size: 13px; line-height: 1.5; color: #c8d7e4; }}
+    main {{ padding: 24px; }}
+    .page-shell {{ max-width: 1320px; margin: 0 auto; }}
+    .intro-block {{
+      max-width: 940px;
+      margin: 0 auto 18px auto;
+      padding: 22px 24px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(247,250,252,0.96) 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      text-align: left;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+      position: relative;
+      overflow: hidden;
+    }}
+    .intro-block::before {{
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 6px;
+      background: linear-gradient(180deg, var(--accent) 0%, var(--accent-deep) 100%);
+    }}
+    .intro-block h2 {{ margin: 0 0 8px 0; font-size: 24px; color: var(--text); }}
+    .intro-block p {{ margin: 0; font-size: 15px; line-height: 1.7; color: var(--muted); }}
+    .table-card {{ background: var(--panel); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 18px; padding: 18px; box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04); }}
+    .table-card h2 {{ margin: 0 0 10px 0; font-size: 20px; color: var(--text); }}
     .values-link {{ font-size: 13px; margin-left: 8px; font-weight: normal; }}
     pre {{ background: #0f172a; color: #e2e8f0; border-radius: 6px; padding: 12px; overflow: auto; }}
     .table-wrap {{ overflow: auto; }}
-    .diagram-wrap {{ overflow: auto; border: 1px solid #d1d5db; border-radius: 8px; padding: 8px; background: #fff; }}
+    .diagram-wrap {{ overflow: auto; border: 1px solid var(--border); border-radius: 12px; padding: 10px; background: var(--panel); }}
     svg {{ width: 100%; height: auto; min-width: 920px; }}
-    .edge {{ stroke: #64748b; stroke-width: 1.6; fill: none; }}
-    .node {{ fill: #f8fafc; stroke: #475569; stroke-width: 1.2; }}
-    .node-title {{ font-size: 14px; fill: #0f172a; font-weight: 600; font-family: Inter, Arial, sans-serif; }}
-    .node-sub {{ font-size: 11px; fill: #475569; font-family: Inter, Arial, sans-serif; }}
-    a:hover .node {{ fill: #eef2ff; stroke: #1d4ed8; }}
+    .edge {{ stroke: #6c7f91; stroke-width: 1.6; fill: none; }}
+    .node {{ fill: #f9fbfd; stroke: #47627b; stroke-width: 1.2; }}
+    .node-title {{ font-size: 14px; fill: #102033; font-weight: 600; font-family: Verdana, Calibri, Arial, sans-serif; }}
+    .node-sub {{ font-size: 11px; fill: #51687d; font-family: Verdana, Calibri, Arial, sans-serif; }}
+    a:hover .node {{ fill: var(--accent-soft); stroke: var(--accent-deep); }}
     table {{ border-collapse: collapse; width: 100%; min-width: 900px; }}
-    th, td {{ border: 1px solid #d1d5db; padding: 8px; vertical-align: top; font-size: 13px; text-align: left; }}
-    th {{ background: #f3f4f6; }}
+    th, td {{ border: 1px solid var(--border); padding: 9px 10px; vertical-align: top; font-size: 13px; text-align: left; line-height: 1.45; }}
+    th {{ background: #eef4f8; color: #16324d; }}
+    tbody tr:nth-child(even) td {{ background: #fbfdff; }}
+    .site-footer {{
+      margin-top: 22px;
+      padding: 22px 24px;
+      border-radius: 16px 16px 0 0;
+      background: var(--footer-bg);
+      color: var(--footer-text);
+      box-shadow: 0 -8px 24px rgba(8, 21, 33, 0.12);
+    }}
+    .site-footer .credit {{
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      gap: 18px;
+    }}
+    .footer-copy {{ font-size: 13px; line-height: 1.6; color: #b8c8d6; margin: 0; }}
+    .logo-strip {{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }}
+    .logo-strip img {{ display: block; height: auto; max-width: 100%; object-fit: contain; }}
+    .logo-strip .ec {{ width: 95px; }}
+    .logo-strip .copernicus {{ width: 210px; }}
+    .logo-strip .ecmwf {{ width: 155px; }}
+    .skip-link {{
+      position: absolute;
+      left: -999px;
+      top: 12px;
+      z-index: 1000;
+      padding: 10px 14px;
+      background: #ffffff;
+      color: #0b1f33;
+      border-radius: 8px;
+      border: 2px solid var(--accent-deep);
+    }}
+    .skip-link:focus {{ left: 12px; }}
     @media (max-width: 1000px) {{
       .layout {{ grid-template-columns: 1fr; }}
       nav {{ position: static; height: auto; }}
+      .site-footer {{ border-radius: 16px 16px 0 0; }}
+      main {{ padding: 16px; }}
     }}
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#content">Skip to content</a>
   <div class="layout">
     <nav>
-      <h1>CDM SQL Schema</h1>
+      <div class="nav-brand" aria-label="Copernicus Climate and ECMWF branding">
+        <img src="{COPERNICUS_LOGO_PATH}" alt="Copernicus logo" />
+        <h1 class="title">Observations Common Data Model Explorer</h1>
+      </div>
       <ul>{nav}</ul>
     </nav>
-    <main>{overview}{cards}{value_cards}</main>
+    <main id="content">
+      <div class="page-shell">
+      <section class="intro-block" aria-labelledby="schema-intro-title">
+        <h2 id="schema-intro-title">Schema at a glance</h2>
+        <p>
+          This document provides a compact, navigable view of the Observations Common Data Model (CDM-OBS) schema. 
+          It  synchronized with the last CDM-OBS release: <strong>{cdm_version}</strong>. Use the overview to 
+          understand the main table relationships first, and then use the left bar to navigate the table schema definitions
+          and the valid-value tables. For more information, see the
+          <a href="https://confluence.ecmwf.int/display/CKB/CDM-OBS-Core%3A+An+abstraction+of+the+CDM-OBS+model+for+data+service+provision+via+the+Climate+Data+Store?searchId=39HL363JJ">Confluence page</a>
+          and the
+          <a href="https://github.com/ecmwf-projects/cdm-obs">GitHub repository</a>.
+        </p>
+      </section>
+      {overview}{cards}{value_cards}
+      <footer class="site-footer" aria-label="Copernicus branding">
+        <div class="credit">
+          <p class="footer-copy">
+            Copernicus Climate Change Service content is operated by ECMWF on behalf of the European Commission.
+            This schema explorer uses the Copernicus, European Commission, and ECMWF marks in a horizontal footer
+            lockup so the page remains consistent with the brand guidance for web material.
+          </p>
+          <div class="logo-strip" aria-label="Official logo line">
+            <img class="ec" src="{EC_LOGO_PATH}" alt="European Commission logo" />
+            <img class="copernicus" src="{COPERNICUS_LOGO_PATH}" alt="Copernicus logo" />
+            <img class="ecmwf" src="{ECMWF_LOGO_PATH}" alt="ECMWF logo" />
+          </div>
+        </div>
+      </footer>
+      </div>
+    </main>
   </div>
 </body>
 </html>
