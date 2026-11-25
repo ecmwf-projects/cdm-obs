@@ -48,34 +48,34 @@ variable,parameter_group,domain,sub_domain,name,units,description
 48,precipitation,atmospheric,,precipitation instensity liquid,mm h-1,Precipitation intensity at surface (liquid or solid)
 49,precipitation,atmospheric,,precipitation intensity solid,mm h-1,Precipitation intensity at surface (solid)
 50,precipitation,atmospheric,,precipitation type,coded,"Liquid, snow, hail, fog"
-51,precipitation,atmospheric,,rainy days,Days,TBD
-52,precipitation,atmospheric,,snow cover,percent,Fraction of a given area which is covered by snow
-53,precipitation,atmospheric,,snow depth,cm,"Vertical distance from the snow surface to the underlying surface (ground, glacier ice or sea ice)."
-54,precipitation,atmospheric,,snow status,coded,Wet or dry
-55,precipitation,atmospheric,,snow water equivalent,mm,Surface snow amount
+51,precipitation,atmospheric,surface,rainy days,d,Number of days with liquid water equivalent thickness of precipitation amount above a threshold
+52,precipitation,atmospheric,surface,snow cover,percent,Fraction of a given area which is covered by snow
+53,precipitation,atmospheric,surface,snow depth,cm,"Vertical distance from the snow surface to the underlying surface (ground, glacier ice or sea ice)."
+54,precipitation,atmospheric,surface,snow status,coded,Wet or dry
+55,precipitation,atmospheric,surface,snow water equivalent,mm,Surface snow amount
 56,pressure,atmospheric,surface,adjunct temperature barometer,K,temperature of the adjunct thermometer to the barometer to reduce pressure to 0 degC
 57,pressure,atmospheric,surface,air pressure,Pa,pressure of air column at specified height
 58,pressure,atmospheric,surface,air pressure at sea level,Pa,"sea level means mean sea level,  which is close to the geoid in sea areas. Air pressure at sea level is the quantity often abbreviated as MSLP or PMSL."
 59,pressure,atmospheric,surface,pressure tendency,Pa,pressure tendency
 60,pressure,atmospheric,surface,pressure tendency characteristics,coded,characteristic of pressure tendency (used in synoptic maps)
-61,radiation,atmospheric,,diffuse radiation,W m-2,The component of global radia-tion that is scattered out of the solar beam by at-mospheric constituents. It is also called diffuse hori-zontal irradiance. 
-62,radiation,atmospheric,,downward longwave irradiance at earth surface,W m-2,"Flux density of radiation emitted by the gases, aerosols and clouds of the atmosphere to the Earth's surface"
-63,radiation,atmospheric,,downward shortwave irradiance at earth surface,W m-2,Flux density of the solar radiation at the Earth surface
-64,radiation,atmospheric,,downward shortwave irradiance at toa,W m-2,Flux density of the solar radiation at the top of the atmosphere
-65,radiation,atmospheric,,earth surface shortwave bidirectional reflectance,percent,Reflectance of the Earth surface as a function of the viewing angle and the illumination angle in the range 0.4-0.7 micro m . The distribution of this variable is represented by the Bidirectional Reflectance Distribution Function (BRDF)
-66,radiation,atmospheric,,fraction of absorbed par ,percent,Fraction of PAR absorbed by vegetation (land or marine) for photosynthesis processes (generally around the 'red' )
-67,radiation,atmospheric,,global radiation,W m-2,"The part of the global radiation in-cident on a surface orthogonal (or normal) to the suns beam, which originates from the solid angle subtended by the suns disk. It is also called direct normal irradiance."
+61,radiation,atmospheric,surface,diffuse radiation,W m-2,The component of global radia-tion that is scattered out of the solar beam by at-mospheric constituents. It is also called diffuse hori-zontal irradiance. 
+62,radiation,atmospheric,surface,downward longwave irradiance at earth surface,W m-2,"Flux density of radiation emitted by the gases, aerosols and clouds of the atmosphere to the Earth's surface"
+63,radiation,atmospheric,surface,downward shortwave irradiance at earth surface,W m-2,Flux density of the solar radiation at the Earth surface
+64,radiation,atmospheric,upper-air,downward shortwave irradiance at toa,W m-2,Flux density of the solar radiation at the top of the atmosphere
+65,radiation,atmospheric,surface,earth surface shortwave bidirectional reflectance,percent,Reflectance of the Earth surface as a function of the viewing angle and the illumination angle in the range 0.4-0.7 micro m . The distribution of this variable is represented by the Bidirectional Reflectance Distribution Function (BRDF)
+66,radiation,atmospheric,surface,fraction of absorbed par ,percent,Fraction of PAR absorbed by vegetation (land or marine) for photosynthesis processes (generally around the 'red' )
+67,radiation,atmospheric,surface,global radiation,W m-2,"The part of the global radiation in-cident on a surface orthogonal (or normal) to the suns beam, which originates from the solid angle subtended by the suns disk. It is also called direct normal irradiance."
 68,radiation,atmospheric,,longwave earth surface emissivity,percent,TBD
 69,radiation,atmospheric,,longwave radiation,W m-2,TBD
-70,radiation,atmospheric,,meteorological optical range,m,Meteorological optical range at surface
-71,radiation,atmospheric,,photosynthetically active radiation,W m-2,Flux of downwelling photons of wavelength 0.4-0.7 micro m
-72,radiation,atmospheric,,shortwave cloud reflectance,percent,Reflectance of the solar radiation from clouds
+70,radiation,atmospheric,surface,meteorological optical range,m,Meteorological optical range at surface
+71,radiation,atmospheric,surface,photosynthetically active radiation,W m-2,Flux of downwelling photons of wavelength 0.4-0.7 micro m
+72,radiation,atmospheric,surface,shortwave cloud reflectance,percent,Reflectance of the solar radiation from clouds
 73,radiation,atmospheric,,shortwave radiation,W m-2,TBD
-74,radiation,atmospheric,,solar gamma ray flux,W m-2,Radiative flux integrated over the gamma-ray domain.
-75,radiation,atmospheric,,solar UV flux,W m-2, Integrated UV flux over the solar disk.
-76,radiation,atmospheric,,solar VIS flux,W m-2, Integrated VIS flux over the solar disk
-77,radiation,atmospheric,,solar X ray flux,W m-2,Integrated X-ray flux over the solar disk
-78,radiation,atmospheric,,sunshine duration ,h,TBD
+74,radiation,atmospheric,upper-air,solar gamma ray flux,W m-2,Radiative flux integrated over the gamma-ray domain.
+75,radiation,atmospheric,upper-air,solar UV flux,W m-2, Integrated UV flux over the solar disk.
+76,radiation,atmospheric,upper-air,solar VIS flux,W m-2, Integrated VIS flux over the solar disk
+77,radiation,atmospheric,upper-air,solar X ray flux,W m-2,Integrated X-ray flux over the solar disk
+78,radiation,atmospheric,surface,sunshine duration ,s,Total time during a day when sunlight was strong enough to cast a shadow / exceed a set brightness threshold. Used as a simple measure of how sunny a day was.
 79,radiation,atmospheric,,upward longwave irradiance at Earth surface,W m-2,Flux density of terrestrial radiation emitted by the Earth surface
 80,radiation,atmospheric,,upward longwave irradiance at TOA,W m-2,"Flux density of terrestrial radiation emitted by the Earth surface and the gases, aerosols and clouds ot the atmosphere at the top of the atmosphere"
 81,radiation,atmospheric,,upward shortwave irradiance at TOA,W m-2,"Flux density of solar radiation, reflected by the Earth surface and atmosphere, emitted to space at the top of the atmosphere"
